@@ -21,10 +21,12 @@ trap 'rm -f "$before" "$after"' EXIT
 
 # 一時的な HID タイムアウトがあるためリトライする
 run() {
-  local attempt out
+  local attempt out status
   for attempt in 1 2 3; do
-    out="$(vitaly "$@" 2>&1)"
-    if ! grep -q '^Error' <<<"$out"; then
+    # vitaly が非ゼロ終了(クラッシュ等)しても set -e で即死せず、失敗としてリトライさせる
+    status=0
+    out="$(vitaly "$@" 2>&1)" || status=$?
+    if [ "$status" -eq 0 ] && ! grep -q '^Error' <<<"$out"; then
       return 0
     fi
     sleep 1
