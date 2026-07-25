@@ -19,6 +19,15 @@ before="$(mktemp -t cornix-before)"
 after="$(mktemp -t cornix-after)"
 trap 'rm -f "$before" "$after"' EXIT
 
+# vitaly はデバイス未検出でもエラー行を出さず exit 0 で空ファイルを残すため、
+# 読み出し結果が .vil として妥当かを確認する
+check_state() {
+  if ! jq -e .layout "$1" > /dev/null 2>&1; then
+    echo "Error: キーボードの状態を読み出せませんでした(未接続? 'mise run devices' で確認)" >&2
+    exit 1
+  fi
+}
+
 # 一時的な HID タイムアウトがあるためリトライする
 run() {
   local attempt out status
@@ -37,6 +46,7 @@ run() {
 
 echo "Reading current state from keyboard..."
 run save -f "$before"
+check_state "$before"
 
 changes=0
 
@@ -121,6 +131,7 @@ fi
 
 echo "Applied $changes change(s). Verifying..."
 run save -f "$after"
+check_state "$after"
 if diff <(jq -S 'del(.macro)' "$file") <(jq -S 'del(.macro)' "$after") > /dev/null; then
   echo "Verified: keyboard matches $file"
 else
