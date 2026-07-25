@@ -62,6 +62,7 @@
 | キー | 動作 |
 |---|---|
 | J + K 同時押し | `` Cmd+` ``(`LGUI(KC_GRAVE)`)— 同一アプリ内のウィンドウ切り替え |
+| D + F 同時押し | `Opt+Space`(`LALT(KC_SPACE)`)— Raycast 起動(Raycast デフォルトのホットキー) |
 
 ### エンコーダ
 
