@@ -1,11 +1,11 @@
 {
   "combo": [
     [
+      "KC_J",
+      "KC_K",
       "KC_NO",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO"
+      "LGUI(KC_GRAVE)"
     ],
     [
       "KC_NO",
