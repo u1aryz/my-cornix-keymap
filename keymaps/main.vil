@@ -348,7 +348,7 @@
         "KC_NO"
       ],
       [
-        "KC_LEFT_SHIFT",
+        "KC_NO",
         "KC_Z",
         "KC_X",
         "KC_C",
@@ -358,7 +358,7 @@
       ],
       [
         "KC_LEFT_CTRL",
-        "KC_LEFT_GUI",
+        "KC_NO",
         "KC_LEFT_ALT",
         "MO(1)",
         "KC_LEFT_GUI",
@@ -396,9 +396,9 @@
         "KC_RIGHT",
         "KC_DOWN",
         "KC_LEFT",
-        "KC_RIGHT_SHIFT",
+        "MO(2)",
         "KC_RIGHT_GUI",
-        "KC_SPACE",
+        "KC_RIGHT_SHIFT",
         "KC_NO"
       ]
     ],
@@ -413,7 +413,7 @@
         "KC_NO"
       ],
       [
-        "QK_KB_0",
+        "KC_NO",
         "KC_NO",
         "KC_NO",
         "KC_GRAVE",
@@ -422,7 +422,7 @@
         "KC_NO"
       ],
       [
-        "QK_KB_1",
+        "KC_NO",
         "KC_NO",
         "KC_NO",
         "KC_NO",
@@ -431,7 +431,7 @@
         "KC_AUDIO_MUTE"
       ],
       [
-        "QK_KB_2",
+        "KC_NO",
         "KC_NO",
         "KC_NO",
         "KC_NO",
@@ -470,9 +470,9 @@
         "KC_NO",
         "KC_NO",
         "KC_NO",
+        "KC_NO",
+        "KC_NO",
         "KC_RIGHT_SHIFT",
-        "KC_NO",
-        "KC_NO",
         "KC_NO"
       ]
     ],
@@ -487,7 +487,7 @@
         "KC_NO"
       ],
       [
-        "KC_NO",
+        "QK_KB_0",
         "KC_NO",
         "KC_NO",
         "KC_NO",
@@ -496,7 +496,7 @@
         "KC_NO"
       ],
       [
-        "KC_NO",
+        "QK_KB_1",
         "KC_NO",
         "KC_NO",
         "KC_NO",
@@ -505,7 +505,7 @@
         "KC_AUDIO_MUTE"
       ],
       [
-        "KC_NO",
+        "QK_KB_2",
         "KC_NO",
         "KC_NO",
         "KC_NO",
