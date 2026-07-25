@@ -416,7 +416,7 @@
         "QK_KB_0",
         "KC_NO",
         "KC_NO",
-        "KC_NO",
+        "KC_GRAVE",
         "KC_SEMICOLON",
         "KC_MINUS",
         "KC_NO"
@@ -451,8 +451,8 @@
       [
         "KC_NO",
         "KC_NO",
-        "KC_NO",
-        "KC_NO",
+        "KC_RIGHT_BRACKET",
+        "KC_LEFT_BRACKET",
         "KC_QUOTE",
         "KC_EQUAL",
         "QK_MOUSE_BUTTON_3"
