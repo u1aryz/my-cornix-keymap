@@ -6,7 +6,8 @@ Cornix LP(PandaKB 製・分割型キーボード、標準ファームウェア�
 
 - `keymaps/main.vil` — 作業用キーマップ(apply/save のデフォルト対象)。Vial のキーマップエクスポート(JSON)
 - `keymaps/default.vil` — 工場出荷時キーマップのバックアップ。**変更・上書きしないこと**
-- `mise.toml` — ツール([vitaly](https://github.com/bskaplou/vitaly) を cargo バックエンドでバージョン固定、jq)とタスクの定義
+- `mise.toml` — ツール([vitaly](https://github.com/bskaplou/vitaly) を cargo バックエンドでバージョン固定、jq、lefthook)とタスクの定義
+- `lefthook.yml` — pre-commit フック。ステージされた `*.vil` を jq で整形する(`mise install` 時に自動でインストールされる)
 - `scripts/apply.sh` — キーマップの差分適用スクリプト。キーボードの現在状態を読み出し、ファイルとの差分(キー・エンコーダ・コンボ・タップダンス・settings)だけを vitaly の個別サブコマンドで書き込み、適用後に再読み出しして検証する。`vitaly load`(一括書き込み)は使わない — RMK では HID I/O Timeout が頻発し、QMK settings で成功コードを返さないため。マクロは未対応(vial.rocks で編集)
 
 ## コマンド
