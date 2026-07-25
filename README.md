@@ -1,0 +1,45 @@
+# my-cornix-keymap
+
+[Cornix LP](https://pandakb.com/shop/keyboard-kit/cornix-split-low-profile-wireless-keyboard/)(PandaKB 製・分割型ロープロファイルキーボード)のキーマップを管理するリポジトリ。
+
+キーマップは [Vial](https://get.vial.today/) の `.vil` ファイルとして `keymaps/` 以下で Git 管理し、CLI ツール [vitaly](https://github.com/bskaplou/vitaly) でキーボードへの適用・保存を行う。ファームウェアは標準(RMK / Vial 対応)のまま使う。
+
+- `keymaps/main.vil` — 作業用キーマップ(これを編集して育てていく。apply/save のデフォルト)
+- `keymaps/default.vil` — 工場出荷時キーマップのバックアップ(変更しない)
+
+## セットアップ
+
+前提: [mise](https://mise.jdx.dev/) と Rust ツールチェーン(cargo)がインストールされていること。[cargo-binstall](https://github.com/cargo-bins/cargo-binstall) があればビルド済みバイナリが使われるため高速。
+
+```sh
+mise trust
+mise install
+```
+
+vitaly はこのプロジェクト内でのみ PATH に乗る(グローバル環境は汚さない)。
+
+## キーマップの適用
+
+キーボードを **有線(USB)** で接続して実行する。
+
+```sh
+# 接続確認
+mise run devices
+
+# キーマップを適用(省略時は keymaps/main.vil)
+mise run apply
+mise run apply keymaps/foo.vil
+
+# キーボードの現在のキーマップをファイルに保存(省略時は keymaps/main.vil)
+mise run save
+mise run save keymaps/foo.vil
+```
+
+## 注意事項
+
+- 無線モードでは "Unknown Device (0000:0000)" として見えるため、適用時は有線接続を推奨
+- macOS では HID アクセスのため、ターミナルに「入力監視(Input Monitoring)」の許可が必要な場合がある
+- [vial.rocks](https://vial.rocks/) で編集して export した `.vil` をコミットする運用も可能
+- apply タスクは `vitaly load`(一括書き込み)ではなく差分適用(`scripts/apply.sh`)。RMK ファームウェアは一括書き込みで HID I/O Timeout が頻発し、QMK settings 書き込みに成功コードを返さないため。現在のキーボード状態を読み出して差分だけを書き込み、適用後に再読み出しして検証する
+- キーコードは `vitaly save` が出力する正規名で書く(例: `KC_ESC` ではなく `KC_ESCAPE`)。エイリアスでも適用はされるが、検証で表記差分として警告される
+- マクロは差分適用に未対応。[vial.rocks](https://vial.rocks/) か `vitaly macros` で直接編集する

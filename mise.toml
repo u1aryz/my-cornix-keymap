@@ -1,0 +1,17 @@
+[tools]
+"cargo:vitaly" = "0.1.32"
+jq = "1.8.1"
+
+[tasks.apply]
+description = "キーマップをキーボードに適用する"
+usage = 'arg "<file>" default="keymaps/main.vil"'
+run = 'scripts/apply.sh "$usage_file"'
+
+[tasks.save]
+description = "キーボードの現在のキーマップをファイルに保存する"
+usage = 'arg "<file>" default="keymaps/main.vil"'
+run = 'vitaly save -f "$usage_file"'
+
+[tasks.devices]
+description = "接続中の Vial 対応デバイスを一覧する"
+run = "vitaly devices"
