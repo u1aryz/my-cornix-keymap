@@ -13,8 +13,8 @@ Cornix LP(PandaKB 製・分割型キーボード、標準ファームウェア�
 
 - `mise install` — vitaly をインストール(プロジェクトローカル)
 - `mise run devices` — 接続中デバイスの一覧
-- `mise run apply [file]` — キーマップをキーボードに適用(デフォルト: `keymaps/default.vil`)
-- `mise run save [file]` — キーボードの現在のキーマップを保存(デフォルト: `keymaps/default.vil`)
+- `mise run apply [file]` — キーマップをキーボードに適用(デフォルト: `keymaps/main.vil`)
+- `mise run save [file]` — キーボードの現在のキーマップを保存(デフォルト: `keymaps/main.vil`)
 
 ## 注意
 
