@@ -20,5 +20,6 @@ Cornix LP(PandaKB 製・分割型キーボード、標準ファームウェア�
 
 - キーボード操作(apply/save/devices)は実機の有線接続が必要。未接続環境では実行しても失敗するだけなので、ファイル編集のみ行うこと
 - `.vil` は Vial が出力する JSON。手編集する場合は JSON として妥当な状態を保つこと
+- `keymaps/main.vil` を変更したら、README.md の「キーマップ(main.vil)」セクション(レイヤー図・エンコーダ表)も合わせて更新すること
 - キーコードは `vitaly save` が出力する正規名で書くこと(例: `KC_ESC` ではなく `KC_ESCAPE`)。エイリアスは apply の検証で表記差分として警告される
 - vitaly はエラー時も exit 0 を返すため、出力の `Error` 行で失敗を判定すること(apply.sh の `run` 関数参照)
