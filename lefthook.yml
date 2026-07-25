@@ -1,0 +1,9 @@
+pre-commit:
+  jobs:
+    - name: format-vil
+      glob: "*.vil"
+      stage_fixed: true
+      run: |
+        for f in {staged_files}; do
+          jq . "$f" > "$f.tmp" && mv "$f.tmp" "$f"
+        done
