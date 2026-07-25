@@ -92,10 +92,15 @@ done < <(jq -r --slurpfile cur "$before" '
   | "\(.) \($new[.][0]) + \($new[.][1]) + \($new[.][2]) + \($new[.][3]) ~ \($new[.][4])"
 ' "$file")
 
-# QMK settings: RMK は成功コードを返さないため vitaly のエラー判定は無視する
+# QMK settings: RMK は成功コードを返さないため vitaly のエラー判定は無視するが、
+# 一時的な HID タイムアウトだけはリトライする(取りこぼしは最終検証で検出される)
 while read -r qsid value; do
   echo "setting: qsid=$qsid -> $value"
-  vitaly settings -q "$qsid" -v "$value" > /dev/null 2>&1 || true
+  for attempt in 1 2 3; do
+    out="$(vitaly settings -q "$qsid" -v "$value" 2>&1)" || true
+    grep -qi 'timeout' <<<"$out" || break
+    sleep 1
+  done
   changes=$((changes + 1))
 done < <(jq -r --slurpfile cur "$before" '
   .settings as $new | $cur[0].settings as $old
