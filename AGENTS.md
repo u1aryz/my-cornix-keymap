@@ -1,6 +1,6 @@
 # my-cornix-keymap
 
-Cornix LP(PandaKB 製・分割型キーボード、標準ファームウェアは RMK / Vial 対応)のキーマップ管理リポジトリ。
+Cornix LP(標準ファームウェアは RMK / Vial 対応)のキーマップ管理リポジトリ。
 
 ## 構成
 

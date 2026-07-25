@@ -1,6 +1,6 @@
 # my-cornix-keymap
 
-[Cornix LP](https://pandakb.com/shop/keyboard-kit/cornix-split-low-profile-wireless-keyboard/)(PandaKB 製・分割型ロープロファイルキーボード)のキーマップを管理するリポジトリ。
+[Cornix LP](https://pandakb.com/shop/keyboard-kit/cornix-split-low-profile-wireless-keyboard/) のキーマップを管理するリポジトリ。
 
 キーマップは [Vial](https://get.vial.today/) の `.vil` ファイルとして `keymaps/` 以下に置き、CLI ツール [vitaly](https://github.com/bskaplou/vitaly) でキーボードへの適用・保存を行う。ファームウェアは標準(RMK / Vial 対応)のまま使う。
 
