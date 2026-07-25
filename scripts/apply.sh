@@ -12,6 +12,9 @@ set -euo pipefail
 
 file="${1:?usage: apply.sh <file.vil>}"
 
+# キーボードに触れる前にファイルの存在と JSON 妥当性を確認する
+jq -e . "$file" > /dev/null
+
 before="$(mktemp -t cornix-before)"
 after="$(mktemp -t cornix-after)"
 trap 'rm -f "$before" "$after"' EXIT
