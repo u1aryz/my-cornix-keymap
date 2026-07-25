@@ -5,7 +5,7 @@ Cornix LP(標準ファームウェアは RMK / Vial 対応)のキーマップ管
 ## 構成
 
 - `keymaps/main.vil` — 作業用キーマップ(apply/save のデフォルト対象)。Vial のキーマップエクスポート(JSON)
-- `keymaps/default.vil` — 工場出荷時キーマップのバックアップ。**変更・上書きしないこと**
+- `keymaps/factory.vil` — 工場出荷時キーマップのバックアップ。**変更・上書きしないこと**
 - `mise.toml` — ツール([vitaly](https://github.com/bskaplou/vitaly) を cargo バックエンドでバージョン固定、jq、lefthook)とタスクの定義
 - `lefthook.yml` — pre-commit フック。ステージされた `*.vil` を `scripts/format-vil.sh` で整形する(`mise install` 時に自動でインストールされる)
 - `scripts/format-vil.sh` — 引数の `.vil` を jq で整形して上書きする(pre-commit フックと format タスクの実体)
