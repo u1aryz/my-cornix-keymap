@@ -2,7 +2,7 @@
 
 [Cornix LP](https://pandakb.com/shop/keyboard-kit/cornix-split-low-profile-wireless-keyboard/)(PandaKB 製・分割型ロープロファイルキーボード)のキーマップを管理するリポジトリ。
 
-キーマップは [Vial](https://get.vial.today/) の `.vil` ファイルとして `keymaps/` 以下で Git 管理し、CLI ツール [vitaly](https://github.com/bskaplou/vitaly) でキーボードへの適用・保存を行う。ファームウェアは標準(RMK / Vial 対応)のまま使う。
+キーマップは [Vial](https://get.vial.today/) の `.vil` ファイルとして `keymaps/` 以下に置き、CLI ツール [vitaly](https://github.com/bskaplou/vitaly) でキーボードへの適用・保存を行う。ファームウェアは標準(RMK / Vial 対応)のまま使う。
 
 - `keymaps/main.vil` — 作業用キーマップ(これを編集して育てていく。apply/save のデフォルト)
 - `keymaps/default.vil` — 工場出荷時キーマップのバックアップ(変更しない)
