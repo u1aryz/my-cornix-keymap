@@ -9,7 +9,11 @@
 
 ## キーマップ(main.vil)
 
-`·` は未割り当て(KC_NO)。`1 !` のような 2 文字表記は「通常時 / Shift 押下時」(US 配列)。Layer 1 は左親指の `MO(1)`、Layer 2 は右親指の `MO(2)` を押している間だけ有効。`BT0`〜`BT2` は Bluetooth 接続先の切り替え(`QK_KB_0`〜`QK_KB_2`)。`Esc^` は Mod-Tap キー(`MT(MOD_LCTL,KC_ESCAPE)`): タップで Esc、ホールドで Ctrl として働く。
+- `·` — 未割り当て(KC_NO)
+- `1 !` のような 2 文字表記 — 「通常時 / Shift 押下時」(US 配列)
+- Layer 1 / Layer 2 — 左親指の `MO(1)` / 右親指の `MO(2)` を押している間だけ有効
+- `BT0`〜`BT2` — Bluetooth 接続先の切り替え(`QK_KB_0`〜`QK_KB_2`)
+- `Esc^` — Mod-Tap キー(`MT(MOD_LCTL,KC_ESCAPE)`)。タップで Esc、ホールドで Ctrl として働く
 
 ### Layer 0(ベース)
 
