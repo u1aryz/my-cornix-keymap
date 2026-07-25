@@ -3,7 +3,4 @@ pre-commit:
     - name: format-vil
       glob: "*.vil"
       stage_fixed: true
-      run: |
-        for f in {staged_files}; do
-          jq . "$f" > "$f.tmp" && mv "$f.tmp" "$f" || { rm -f "$f.tmp"; exit 1; }
-        done
+      run: scripts/format-vil.sh {staged_files}

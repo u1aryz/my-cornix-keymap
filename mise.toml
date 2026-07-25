@@ -16,6 +16,10 @@ description = "キーボードの現在のキーマップをファイルに保�
 usage = 'arg "<file>" default="keymaps/main.vil"'
 run = 'vitaly save -f "$usage_file"'
 
+[tasks.format]
+description = "キーマップ(.vil)を jq で整形する"
+run = "scripts/format-vil.sh keymaps/*.vil"
+
 [tasks.devices]
 description = "接続中の Vial 対応デバイスを一覧する"
 run = "vitaly devices"
