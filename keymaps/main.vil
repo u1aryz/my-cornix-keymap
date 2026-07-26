@@ -5,7 +5,7 @@
       "KC_K",
       "KC_NO",
       "KC_NO",
-      "LGUI(KC_GRAVE)"
+      "LCTL(KC_TAB)"
     ],
     [
       "KC_D",
@@ -15,11 +15,11 @@
       "LALT(KC_SPACE)"
     ],
     [
+      "KC_U",
+      "KC_I",
       "KC_NO",
       "KC_NO",
-      "KC_NO",
-      "KC_NO",
-      "KC_NO"
+      "LGUI(KC_GRAVE)"
     ],
     [
       "KC_NO",
