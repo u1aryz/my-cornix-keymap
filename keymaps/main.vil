@@ -242,8 +242,8 @@
         "KC_AUDIO_VOL_UP"
       ],
       [
-        "QK_MOUSE_WHEEL_UP",
-        "QK_MOUSE_WHEEL_DOWN"
+        "KC_BRIGHTNESS_DOWN",
+        "KC_BRIGHTNESS_UP"
       ]
     ],
     [
