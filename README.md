@@ -5,13 +5,13 @@
 キーマップは [Vial](https://get.vial.today/) の `.vil` ファイルとして `keymaps/` 以下に置き、CLI ツール [vitaly](https://github.com/bskaplou/vitaly) でキーボードへの適用・保存を行う。ファームウェアは標準(RMK / Vial 対応)のまま使う。
 
 - `keymaps/main.vil` — 作業用キーマップ(これを編集して育てていく。apply/save のデフォルト)
-- `keymaps/factory.vil` — 工場出荷時キーマップのバックアップ(変更しない)
+- `keymaps/factory.vil` — 初期キーマップのバックアップ(変更しない)
 
 <img src="docs/images/cornix-lp.webp" width="400" alt="Cornix LP">
 
 ## キーマップ(main.vil)
 
-方針: 極力工場出荷状態を維持しつつ、プログラマ向けに使いやすいキーマップを目指す。
+方針: 初期キーマップを極力維持しつつ、プログラマ向けに使いやすいキーマップを目指す。
 
 - `·` — 未割り当て(KC_NO)
 - `1 !` のような 2 文字表記 — 「通常時 / Shift 押下時」(US 配列)
