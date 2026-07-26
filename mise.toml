@@ -1,4 +1,5 @@
 [tools]
+rust = "1.97.1"
 "cargo:vitaly" = "0.1.32"
 jq = "1.8.1"
 lefthook = "2.1.10"

@@ -77,14 +77,14 @@
 
 ## セットアップ
 
-前提: [mise](https://mise.jdx.dev/) と Rust ツールチェーン(cargo)がインストールされていること。[cargo-binstall](https://github.com/cargo-bins/cargo-binstall) があればビルド済みバイナリが使われるため高速。
+前提: [mise](https://mise.jdx.dev/) がインストールされていること。
 
 ```sh
 mise trust
 mise install
 ```
 
-vitaly はこのプロジェクト内でのみ PATH に乗る(グローバル環境は汚さない)。
+vitaly や rust はこのプロジェクト内でのみ PATH に乗る(グローバル環境は汚さない)。
 
 ## キーマップの適用
 
