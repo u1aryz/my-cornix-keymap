@@ -330,7 +330,7 @@
   "layout": [
     [
       [
-        "KC_TAB",
+        "KC_ESCAPE",
         "KC_Q",
         "KC_W",
         "KC_E",
@@ -339,7 +339,7 @@
         "KC_NO"
       ],
       [
-        "MT(MOD_LCTL,KC_ESCAPE)",
+        "MT(MOD_LCTL,KC_TAB)",
         "KC_A",
         "KC_S",
         "KC_D",
